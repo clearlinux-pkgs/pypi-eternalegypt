@@ -4,7 +4,7 @@
 #
 Name     : pypi-eternalegypt
 Version  : 0.0.13
-Release  : 41
+Release  : 42
 URL      : https://files.pythonhosted.org/packages/b4/13/7b2141cbcbed83d5e217670ace87fae48eacc24d472a2a9db6550fbab7cc/eternalegypt-0.0.13.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b4/13/7b2141cbcbed83d5e217670ace87fae48eacc24d472a2a9db6550fbab7cc/eternalegypt-0.0.13.tar.gz
 Summary  : Netgear LTE modem API
