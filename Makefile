@@ -1,5 +1,5 @@
 PKG_NAME := pypi-eternalegypt
-URL = https://files.pythonhosted.org/packages/b4/13/7b2141cbcbed83d5e217670ace87fae48eacc24d472a2a9db6550fbab7cc/eternalegypt-0.0.13.tar.gz
+URL = https://files.pythonhosted.org/packages/e8/54/1c1959ac4004d1ff76393cae34bd19017ba69362ca6a4c4ff437f6d947a3/eternalegypt-0.0.15.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
