@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-eternalegypt
-Version  : 0.0.15
-Release  : 46
-URL      : https://files.pythonhosted.org/packages/e8/54/1c1959ac4004d1ff76393cae34bd19017ba69362ca6a4c4ff437f6d947a3/eternalegypt-0.0.15.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e8/54/1c1959ac4004d1ff76393cae34bd19017ba69362ca6a4c4ff437f6d947a3/eternalegypt-0.0.15.tar.gz
+Version  : 0.0.16
+Release  : 47
+URL      : https://files.pythonhosted.org/packages/b8/fb/ec40ac588829d39420157e7067df95ac826a52909bef382d5d85c73ea2ce/eternalegypt-0.0.16.tar.gz
+Source0  : https://files.pythonhosted.org/packages/b8/fb/ec40ac588829d39420157e7067df95ac826a52909bef382d5d85c73ea2ce/eternalegypt-0.0.16.tar.gz
 Summary  : Netgear LTE modem API
 Group    : Development/Tools
 License  : MIT
@@ -57,10 +57,10 @@ python3 components for the pypi-eternalegypt package.
 
 
 %prep
-%setup -q -n eternalegypt-0.0.15
-cd %{_builddir}/eternalegypt-0.0.15
+%setup -q -n eternalegypt-0.0.16
+cd %{_builddir}/eternalegypt-0.0.16
 pushd ..
-cp -a eternalegypt-0.0.15 buildavx2
+cp -a eternalegypt-0.0.16 buildavx2
 popd
 
 %build
@@ -68,12 +68,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679937964
+export SOURCE_DATE_EPOCH=1684608318
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
